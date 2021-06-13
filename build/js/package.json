@@ -1,0 +1,14 @@
+{
+  "name": "mazewalker",
+  "version": "1.0-SNAPSHOT",
+  "private": true,
+  "workspaces": [
+    "packages\\mazewalker"
+  ],
+  "resolutions": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

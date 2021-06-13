@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <title>Maze</title>
+</head>
+<body class="page">
+
+<div id="hint">
+    Cell: {x: 13, y: 25}
+</div>
+
+<div id="context-menu" class="context-menu">
+    <div class="item">
+        Automaton_1
+    </div>
+    <div class="item">
+        Automaton_2
+    </div>
+    <div class="item">
+        Automaton_3
+    </div>
+    <div class="item">
+        Automaton_4
+    </div>
+    <hr>
+    <div class="item">
+        <i class="fa fa-refresh"></i> Reload
+    </div>
+    <div class="item">
+        <i class="fa fa-times"></i> Exit
+    </div>
+
+    <div class="item">
+        <i class="fa fa-times"></i> Exit
+    </div>
+
+    <div class="item">
+        <i class="fa fa-times"></i> Exit
+    </div>
+
+    <div class="item">
+        <i class="fa fa-times"></i> Exit
+    </div>
+</div>
+
+<section class="navigation">
+
+
+    <ul class="maze__navigation">
+        <li class="maze__navigation-image"><i class="far fa-save fa-lg"></i></li>
+        <li class="maze__navigation-image"><i class="far fa-play fa-lg" id="play"></i></li>
+
+        <li class="maze__navigation-image" id="line_tool">
+            <div class="dropdown">
+                <i class="far fa-pen fa-lg" id="dropdownMenuButton" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" id="line_tool_up">up</a>
+                    <a class="dropdown-item" id="line_tool_down">down</a>
+                    <a class="dropdown-item" id="line_tool_left">left</a>
+                    <a class="dropdown-item" id="line_tool_right">right</a>
+                    <a class="dropdown-item" id="line_tool_disable">disable</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="maze__navigation-image"><i class="fas fa-plus fa-lg" id="add"></i></li>
+        <li class="maze__navigation-image"><i class="fas fa-undo fa-lg" id="undo"></i></li>
+        <li class="maze__navigation-image" id="border_eraser"><i class="fal fa-snowplow fa-lg"></i></li>
+
+        <li class="maze__navigation-image" id="dfa_cleaner"><i class="fas fa-broom fa-lg"></i></li>
+
+<!--        <li class="maze__navigation-image"><i class="fal fa-arrows fa-lg"></i></li>-->
+
+    </ul>
+
+    <ul class="compile__navigation">
+        <li class="maze__navigation-image"><i class="fas fa-plus fa-lg" id="add_automaton"></i></li>
+        <li class="maze__navigation-image" id="save_code"><i class="far fa-save fa-lg"></i></li>
+        <li class="maze__navigation-image"><i class="fal fa-long-arrow-down fa-lg"></i></li>
+        <li class="maze__navigation-image" id="build"><i class="fal fa-hammer fa-lg"></i></li>
+        <li class="maze__navigation-image"><i class="fas fa-soap"></i></li>
+    </ul>
+
+</section>
+
+
+<section class="maze">
+    <div class="maze__area">
+        <!-- <h2 class="maze__title">Это поле лабиринта</h2> -->
+        <!-- canvas 784 * 784-->
+        <canvas width="784" height="784" id="test" tabindex="1">
+            Здесь можно указать текст для тех,
+            у кого не поддерживается тег canvas
+        </canvas>
+    </div>
+    <div class="textarea">
+        <!-- <ul class="maze__navigation maze__navigation-second">
+          <li class="maze__navigation-image"><i class="far fa-save fa-lg"></i></li>
+          <li class="maze__navigation-image"><i class="far fa-play fa-lg"></i></li>
+          <li class="maze__navigation-image"><i class="fas fa-undo fa-lg"></i></li>
+          <li class="maze__navigation-image"><i class="far fa-pen fa-lg"></i></li>
+          <li class="maze__navigation-image"><i class="fas fa-plus fa-lg"></i></li>
+        </ul> -->
+
+        <div class="textarea__text" id="editor">
+            <pre class="line_numbers" id="lines"> 1 <br> 2 <br> 3 <br></pre>
+            <!--            <pre class="code" contenteditable="true" id="code" tabindex="1" ></pre>-->
+            <textarea class="code" id="code" tabindex="1"></textarea>
+            <!-- <h2 class="maze__title">Это поле для текстового редактора</h2> -->
+        </div>
+
+
+        <div class="textarea__preview" id="output">
+            <!-- <h2 class="maze__title">Это поле для превьюшки</h2> -->
+
+            <div class="textarea__preview__menu">
+                <button type="button" class="textarea__preview__menu__item">output</button>
+                <button type="button" class="textarea__preview__menu__item">mazes</button>
+                <button type="button" class="textarea__preview__menu__item">automatons</button>
+                <button type="button" class="textarea__preview__menu__item">terminal</button>
+            </div>
+
+            <div class="textarea__preview__content" id="output_content">
+                <textarea class="textarea__preview__content" id="preview_output_content"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <div class="folders">
+        <!-- <h2 class="maze__title">Это файловый менеджер</h2> -->
+    </div>
+</section>
+<script src="mazewalker.js"></script>
+<div id="root"></div>
+</body>
+</html>

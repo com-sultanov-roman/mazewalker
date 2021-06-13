@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="mazewalker-1.0-SNAPSHOT">
+    <output-path>E:\java.kotlin\diploma.releases\v1.0\mazewalker\build\libs</output-path>
+    <root id="archive" name="mazewalker-1.0-SNAPSHOT.jar" />
+  </artifact>
+</component>

@@ -1,0 +1,24 @@
+{
+  "version": "9",
+  "items": {
+    "f4dc9750f60c16fb0a0e55f4f8c2366f": {
+      "src": "C:\\Users\\Roman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\1.5.0\\8eab8909451db9e9c3ff2ea33439f6f501053cd5\\kotlin-stdlib-js-1.5.0.jar",
+      "target": "kotlin\\1.5.0"
+    },
+    "60b8d22184ea05b8478f531cf627b2b6": {
+      "src": "C:\\Users\\Roman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.5.0\\4080d69efca5e39e9b4972f125e40f1607bd6460\\kotlin-stdlib-common-1.5.0.jar"
+    },
+    "97d71e7777d60ce52b440d742431cb6f": {
+      "src": "C:\\Users\\Roman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-html-js\\0.7.2\\baf7e494e549776d0ae3e0ee225804a513f5dc26\\kotlinx-html-jslegacy-0.7.2.jar",
+      "target": "kotlinx-html-js\\0.7.2"
+    },
+    "337ff817e087aded273dfc9ba494baf4": {
+      "src": "C:\\Users\\Roman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js-runner\\1.5.0\\20ef83e15f8c2cde090f3bfd8c1eba72947f7ab8\\kotlin-test-js-runner-1.5.0.jar",
+      "target": "kotlin-test-js-runner\\1.5.0"
+    },
+    "dcad44328cfade6175d3cf385590e401": {
+      "src": "C:\\Users\\Roman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js\\1.5.0\\a4d28199ebb541ae9f12e9b52ac5becc7022c622\\kotlin-test-js-1.5.0.jar",
+      "target": "kotlin-test\\1.5.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<pre class="cpp" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span
+        style="color: #0000ff;">for</span> <span style="color: #008000;">&#40;</span>i <span
+        style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span style="color: #008080;">;</span> i <span
+        style="color: #000080;">&lt;</span> argc<span style="color: #008080;">;</span> i<span
+        style="color: #000040;">++</span><span style="color: #008000;">&#41;</span> <span
+        style="color: #008000;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>argv<span style="color: #008000;">&#91;</span>i<span
+        style="color: #008000;">&#93;</span><span style="color: #008000;">&#91;</span><span
+        style="color: #0000dd;">0</span><span style="color: #008000;">&#93;</span> <span
+        style="color: #000040;">!</span><span style="color: #000080;">=</span> <span
+        style="color: #FF0000;">'-'</span><span style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">            <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span><span
+        style="color: #000040;">!</span>setInput<span style="color: #008000;">&#41;</span> <span
+        style="color: #008000;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>i <span
+        style="color: #000040;">!</span><span style="color: #000080;">=</span> <span
+        style="color: #0000dd;">1</span><span style="color: #008000;">&#41;</span> <span
+        style="color: #008000;">&#123;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>flag_errors<span
+        style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                        <span
+        style="color: #0000dd;">printf</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;ValidationError: Wrong order of parameters.<span
+        style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: #008000;">&#41;</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">return</span> <span style="color: #0000dd;">4</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                inputFile <span
+        style="color: #000080;">=</span> argv<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>validateFile<span
+        style="color: #008000;">&#40;</span>inputFile<span style="color: #008000;">&#41;</span><span
+        style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>flag_errors<span
+        style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                        <span
+        style="color: #0000dd;">printf</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;ValidationError: There is no such file.<span
+        style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: #008000;">&#41;</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">return</span> <span style="color: #0000dd;">5</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                setInput <span
+        style="color: #000080;">=</span> <span style="color: #0000dd;">1</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">            <span
+        style="color: #008000;">&#125;</span> <span style="color: #0000ff;">else</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>i <span
+        style="color: #000040;">!</span><span style="color: #000080;">=</span> <span
+        style="color: #0000dd;">2</span><span style="color: #008000;">&#41;</span> <span
+        style="color: #008000;">&#123;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">if</span> <span style="color: #008000;">&#40;</span>flag_errors<span
+        style="color: #008000;">&#41;</span> <span style="color: #008000;">&#123;</span></div></li><li
+        style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                        <span
+        style="color: #0000dd;">printf</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;ValidationError: Wrong order of parameters.<span
+        style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: #008000;">&#41;</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                    <span
+        style="color: #0000ff;">return</span> <span style="color: #0000dd;">4</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">                outputFile <span
+        style="color: #000080;">=</span> argv<span style="color: #008000;">&#91;</span>i<span style="color: #008000;">&#93;</span><span
+        style="color: #008080;">;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">            <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        <span
+        style="color: #008000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div
+        style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span
+        style="color: #008000;">&#125;</span></div></li></ol></pre>
+
+</body>
+</html>

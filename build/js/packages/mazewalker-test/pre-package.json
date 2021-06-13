@@ -1,0 +1,16 @@
+{
+  "name": "mazewalker-test",
+  "version": "1.0.0-SNAPSHOT",
+  "main": "kotlin/mazewalker-test.js",
+  "devDependencies": {},
+  "dependencies": {
+    "mazewalker": "1.0.0-SNAPSHOT",
+    "kotlin": "file:E:\\java.kotlin\\diploma\\build\\js\\packages_imported\\kotlin\\1.5.0",
+    "kotlinx-html-js": "file:E:\\java.kotlin\\diploma\\build\\js\\packages_imported\\kotlinx-html-js\\0.7.2",
+    "kotlin-test": "file:E:\\java.kotlin\\diploma\\build\\js\\packages_imported\\kotlin-test\\1.5.0",
+    "kotlin-test-js-runner": "file:E:\\java.kotlin\\diploma\\build\\js\\packages_imported\\kotlin-test-js-runner\\1.5.0"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}
